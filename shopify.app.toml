@@ -1,0 +1,28 @@
+# Learn more about configuring your app at https://shopify.dev/docs/apps/tools/cli/configuration
+
+client_id = "1d7fa5ef990a295b06cf81588fce4894"
+name = "post-purchase-survey"
+application_url = "https://trace-philosophy-documentary-detailed.trycloudflare.com"
+embedded = true
+
+[build]
+automatically_update_urls_on_dev = true
+dev_store_url = "smart-upsell-app.myshopify.com"
+include_config_on_deploy = true
+
+[access_scopes]
+# Learn more at https://shopify.dev/docs/apps/tools/cli/configuration#access_scopes
+scopes = "write_products"
+
+[auth]
+redirect_urls = [
+  "https://trace-philosophy-documentary-detailed.trycloudflare.com/auth/callback",
+  "https://trace-philosophy-documentary-detailed.trycloudflare.com/auth/shopify/callback",
+  "https://trace-philosophy-documentary-detailed.trycloudflare.com/api/auth/callback"
+]
+
+[webhooks]
+api_version = "2024-01"
+
+[pos]
+embedded = false

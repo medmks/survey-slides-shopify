@@ -1,0 +1,28 @@
+# Learn more about configuring your app at https://shopify.dev/docs/apps/tools/cli/configuration
+
+client_id = "df364b57b6534b350d147faedf138f74"
+name = "Survey-Slides"
+application_url = "https://handles-consist-tumor-inspired.trycloudflare.com"
+embedded = true
+
+[build]
+automatically_update_urls_on_dev = true
+dev_store_url = "my-upsell-store.myshopify.com"
+include_config_on_deploy = true
+
+[access_scopes]
+# Learn more at https://shopify.dev/docs/apps/tools/cli/configuration#access_scopes
+scopes = ""
+
+[auth]
+redirect_urls = [
+  "https://handles-consist-tumor-inspired.trycloudflare.com/auth/callback",
+  "https://handles-consist-tumor-inspired.trycloudflare.com/auth/shopify/callback",
+  "https://handles-consist-tumor-inspired.trycloudflare.com/api/auth/callback"
+]
+
+[webhooks]
+api_version = "2024-01"
+
+[pos]
+embedded = false

@@ -1,0 +1,66 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "sqlite"
+  url      = "file:dev.sqlite"
+}
+
+model Session {
+  id          String    @id
+  shop        String
+  state       String
+  isOnline    Boolean   @default(false)
+  scope       String?
+  expires     DateTime?
+  accessToken String
+  userId      BigInt?
+}
+
+
+
+model Survey {
+  id        Int      @id @default(autoincrement())
+  title      String   
+  typeSurvey String
+  subtitle   String?
+  fields    Field[]  @relation(name: "SurveyToFields")
+  RenderInShop  Boolean
+}
+
+model Field {
+  id          Int      @id @default(autoincrement())
+  surveyId    Int 
+  label       String
+  type        String
+  survey      Survey  @relation(name: "SurveyToFields", fields: [surveyId], references: [id])
+  options     Option[]
+}
+model Option {
+  id          Int      @id @default(autoincrement())
+  fieldId     Int      
+  label       String
+  value       String
+  Field       Field  @relation(fields: [fieldId], references: [id])
+}
+model Attribution {
+  id          Int      @id @default(autoincrement())
+  suevryname  String
+  type String 
+  order String
+  answers Answers[] 
+
+}
+model Answers{
+  id          Int      @id @default(autoincrement())
+  idField   Int   
+  AttributionId     Int
+  question String
+  answer String
+  Attribution Attribution @relation(fields: [AttributionId], references: [id])
+
+}

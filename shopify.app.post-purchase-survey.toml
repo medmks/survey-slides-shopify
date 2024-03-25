@@ -1,0 +1,28 @@
+# Learn more about configuring your app at https://shopify.dev/docs/apps/tools/cli/configuration
+
+client_id = "81b6e009368eb3d5d30e5898404c1945"
+name = "Post-Purchase-Survey"
+application_url = "https://toy-books-tim-half.trycloudflare.com"
+embedded = true
+
+[build]
+automatically_update_urls_on_dev = true
+dev_store_url = "survey-boutique.myshopify.com"
+include_config_on_deploy = true
+
+[access_scopes]
+# Learn more at https://shopify.dev/docs/apps/tools/cli/configuration#access_scopes
+scopes = ""
+
+[auth]
+redirect_urls = [
+  "https://toy-books-tim-half.trycloudflare.com/auth/callback",
+  "https://toy-books-tim-half.trycloudflare.com/auth/shopify/callback",
+  "https://toy-books-tim-half.trycloudflare.com/api/auth/callback"
+]
+
+[webhooks]
+api_version = "2024-01"
+
+[pos]
+embedded = false
