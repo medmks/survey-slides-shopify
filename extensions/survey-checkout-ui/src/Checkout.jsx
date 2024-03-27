@@ -84,7 +84,7 @@ function Attribution() {
 
     try {
       const response = await fetch(
-        "https://toy-books-tim-half.trycloudflare.com/api/survey",
+        "https://petite-trend-cordless-very.trycloudflare.com/api/survey",
         {
           method: "POST",
           mode: "cors",
@@ -115,7 +115,7 @@ function Attribution() {
   useEffect(() => {
     async function FetchSurvey(token) {
       const res = fetch(
-        "https://toy-books-tim-half.trycloudflare.com/api/survey",
+        "https://petite-trend-cordless-very.trycloudflare.com/api/survey",
         {
           method: "GET",
           mode: "cors",
@@ -131,7 +131,9 @@ function Attribution() {
         })
         .then((data) => {
           return data;
-        });
+        }).catch((error)=>{
+          console.log(error);
+        })
 
       return res;
     }

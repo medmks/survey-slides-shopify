@@ -2,7 +2,7 @@
 
 client_id = "df364b57b6534b350d147faedf138f74"
 name = "Survey-Slides"
-application_url = "https://handles-consist-tumor-inspired.trycloudflare.com"
+application_url = "https://petite-trend-cordless-very.trycloudflare.com"
 embedded = true
 
 [build]
@@ -16,9 +16,9 @@ scopes = ""
 
 [auth]
 redirect_urls = [
-  "https://handles-consist-tumor-inspired.trycloudflare.com/auth/callback",
-  "https://handles-consist-tumor-inspired.trycloudflare.com/auth/shopify/callback",
-  "https://handles-consist-tumor-inspired.trycloudflare.com/api/auth/callback"
+  "https://petite-trend-cordless-very.trycloudflare.com/auth/callback",
+  "https://petite-trend-cordless-very.trycloudflare.com/auth/shopify/callback",
+  "https://petite-trend-cordless-very.trycloudflare.com/api/auth/callback"
 ]
 
 [webhooks]
