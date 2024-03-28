@@ -2,7 +2,7 @@
 
 client_id = "df364b57b6534b350d147faedf138f74"
 name = "Survey-Slides"
-application_url = "https://petite-trend-cordless-very.trycloudflare.com"
+application_url = "https://phase-front-allow-laptops.trycloudflare.com"
 embedded = true
 
 [build]
@@ -16,9 +16,9 @@ scopes = ""
 
 [auth]
 redirect_urls = [
-  "https://petite-trend-cordless-very.trycloudflare.com/auth/callback",
-  "https://petite-trend-cordless-very.trycloudflare.com/auth/shopify/callback",
-  "https://petite-trend-cordless-very.trycloudflare.com/api/auth/callback"
+  "https://phase-front-allow-laptops.trycloudflare.com/auth/callback",
+  "https://phase-front-allow-laptops.trycloudflare.com/auth/shopify/callback",
+  "https://phase-front-allow-laptops.trycloudflare.com/api/auth/callback"
 ]
 
 [webhooks]

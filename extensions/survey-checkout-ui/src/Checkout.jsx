@@ -84,7 +84,7 @@ function Attribution() {
 
     try {
       const response = await fetch(
-        "https://petite-trend-cordless-very.trycloudflare.com/api/survey",
+        "https://phase-front-allow-laptops.trycloudflare.com/survey",
         {
           method: "POST",
           mode: "cors",
@@ -115,7 +115,7 @@ function Attribution() {
   useEffect(() => {
     async function FetchSurvey(token) {
       const res = fetch(
-        "https://petite-trend-cordless-very.trycloudflare.com/api/survey",
+        "https://phase-front-allow-laptops.trycloudflare.com/survey",
         {
           method: "GET",
           mode: "cors",

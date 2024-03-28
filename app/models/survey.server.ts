@@ -70,12 +70,29 @@ export async function GetAllSurveys() {
   return AllSurveys;
 }
 export async function GetSurveyResponses() {
-  const questionCounts = await db.answers.groupBy({
-    by: ['question', 'answer'],
-    _count: true,
-  });
+  console.log('===uniqueQuestions====');
+  const uniqueQuestions = await db.$queryRaw`
+  SELECT DISTINCT question
+  FROM Answers
+  GROUP BY AttributionId, question
+  HAVING COUNT(*) = 1;
+`;
+const Test = await db.$queryRaw`
+ SELECT a.suevryname, b.question, b.answer, COUNT(*) as answerCount
+  FROM Attribution AS a
+  JOIN Answers AS b ON a.id = b.AttributionId
+  GROUP BY a.suevryname, b.question, b.answer;
   
-  console.log(questionCounts);
+`;
+
+
+
+
+const ResCounts = await db.answers.groupBy({
+  by: ['question', 'answer'],
+    _count: true,
+  });  
+  // console.log(ResCounts);
   const Res = await db.attribution.findMany({
     include: {
       answers: true
@@ -84,7 +101,7 @@ export async function GetSurveyResponses() {
   if (!Res) {
     return null;
   }
-  return questionCounts;
+  return ResCounts;
 }
 
 
