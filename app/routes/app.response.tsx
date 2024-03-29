@@ -38,7 +38,7 @@ const Dashboard = () => {
         hasNext: true,
       }}
     >
-      <Text as="h1" variant="heading3xl">
+      <Text as="h1" variant="heading2xl">
         Response
       </Text>
       <ResponseTable/>

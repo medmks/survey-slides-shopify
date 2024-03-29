@@ -84,7 +84,7 @@ function Attribution() {
 
     try {
       const response = await fetch(
-        "https://phase-front-allow-laptops.trycloudflare.com/survey",
+        "https://positive-filed-joyce-furniture.trycloudflare.com/api/survey",
         {
           method: "POST",
           mode: "cors",
@@ -115,7 +115,7 @@ function Attribution() {
   useEffect(() => {
     async function FetchSurvey(token) {
       const res = fetch(
-        "https://phase-front-allow-laptops.trycloudflare.com/survey",
+        "https://positive-filed-joyce-furniture.trycloudflare.com/api/survey",
         {
           method: "GET",
           mode: "cors",
